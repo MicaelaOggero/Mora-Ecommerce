@@ -1,0 +1,93 @@
+@import '../base/variables';
+@import '../base/extensiones';
+
+.iniciar{
+    grid-area: producto;
+    .overlay{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        z-index: 2;
+
+        .datos-inicio{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            @extend %bg-general;
+            margin-top: 130px;
+            
+            @media screen and (max-width: 880px){
+                margin-top: 25vh;
+            }
+
+            .btn-cerrar-popup{
+                color: #BBBBBB;
+                align-self: flex-end;
+                padding: 15px;
+
+                &:hover{
+                    color: #000;
+                }
+            }
+
+            .espacio{
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                .row{
+                    .titulo-inicio-sesion{
+                        font-size: $tamano-subtitulos;
+                        font-family: $fuente-subtitulos;
+                        margin-bottom: 30px;
+                        text-align: center;
+        
+                        @media screen and (max-width: 460px) {
+                            font-size: $tamano-subtitulos-mobile;
+                        }
+                    }
+                }
+
+                .form-inicio-sesion{
+                    width: 80%;
+                    margin: auto;
+        
+                    .contenedor-btnInicio-sesion{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 40px;
+                        padding-bottom: 60px;
+
+                        .btn{
+                            @extend %btn-general;
+                            
+        
+                            &:hover{
+                                background-color: rgba(255, 182, 193, 0.474);
+                            }
+                        }
+                        
+                    }
+                }
+
+            
+            }
+        }
+    }
+
+    .active-i{
+    visibility: visible;
+    }
+}
+
+.enlace{
+    color: black;
+}

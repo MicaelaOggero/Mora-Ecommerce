@@ -1,0 +1,34 @@
+@import 'componentes/header';
+@import 'componentes/iniciar-sesion';
+@import 'componentes/productos';
+@import 'componentes/footer';
+@import 'componentes/registrarse';
+@import 'componentes/carrito';
+@import 'componentes/como-comprar';
+@import 'componentes/politicas';
+
+
+.margen{
+    margin: 10px 0;
+}
+
+.contenedor{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: 
+    'header'
+    'productos'
+    'footer';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}

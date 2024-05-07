@@ -1,0 +1,51 @@
+.contenedor-productos{
+    grid-area: productos;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: 20px 0;
+    margin-top: 150px;
+
+    .producto{
+        text-align: center;
+        margin: 40px 20px;
+        transition: 200ms;
+
+        &:hover{
+            translate: 0 -10px;
+        }
+
+        .card-img-top{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body{
+            
+            .precio{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .codigo-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .codigo{
+                    margin-left: 5px;
+                }
+            }
+
+            .btn{
+                @extend %btn-general;
+                font-size: 20px;
+                &:hover{
+                    background-color: rgba(255, 182, 193, 0.474);
+                }
+            }
+
+            
+        }
+    }
+}

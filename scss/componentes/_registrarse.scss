@@ -1,0 +1,73 @@
+@import '../base/extensiones';
+
+.iniciar{
+    grid-area: productos;
+    .overlay-c{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        z-index: 2;
+
+        .datos-registro{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 700px;
+            @extend %bg-general;
+
+            .btn-cerrar-popup{
+                color: #BBBBBB;
+                align-self: flex-end;
+                padding: 15px;
+    
+                &:hover{
+                    color: #000;
+                }
+            }
+
+            .titulo-registro{
+                font-size: $tamano-subtitulos;
+                font-family: $fuente-subtitulos;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: 460px) {
+                    font-size: $tamano-subtitulos-mobile;
+                }
+            }
+
+            .form-registro{
+                width: 90%;
+
+                .contenedor-btnRegistro{
+                    padding-top: 20px;
+                    padding-bottom: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    .btn{
+                        @extend %btn-general;
+                        
+
+                        &:hover{
+                            background-color: rgba(255, 182, 193, 0.474);
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    .active-c{
+            visibility: visible;
+    }
+}
