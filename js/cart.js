@@ -4,12 +4,11 @@ const precioElement = document.getElementById("precio");
 const carritoVacioElement = document.getElementById("carrito-vacio");
 const totalesElement = document.getElementById("totales");
 const vaciarCarritoElement=document.getElementById("vaciar");
-//localStorage.clear();
 
 function crearTarjetaProductosInicio(){
     contenedorTarjetasCart.innerHTML="";
     const productos=JSON.parse(localStorage.getItem("productos"));
-    console.log(productos);
+    
     if(productos && productos.length > 0){
         productos.forEach(producto => {
             const nuevoConjunto=document.createElement("div");
@@ -77,7 +76,6 @@ function actualizarTotales(){
 
 function revisarMensajeVacio(){
     const productosConjunto=JSON.parse(localStorage.getItem("productos"));
-    console.log(productosConjunto, productosConjunto == true);
     carritoVacioElement.classList.toggle("escondido", productosConjunto && productosConjunto.length>0);
     totalesElement.classList.toggle("escondido", !(productosConjunto && productosConjunto.length>0));
 }

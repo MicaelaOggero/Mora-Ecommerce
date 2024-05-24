@@ -1,6 +1,7 @@
 const contenedorTarjetas = document.getElementById("productos-conteiner");
 
-function crearTarjetaProductosInicio(productos){
+function crearTarjetaProductosIn(productos){
+    console.log(productos);
     productos.forEach(producto => {
         const nuevoConjunto=document.createElement("div");
         nuevoConjunto.classList = "tarjeta-producto";
@@ -21,9 +22,16 @@ function crearTarjetaProductosInicio(productos){
         nuevoConjunto.getElementsByTagName("button")[0].addEventListener("click", ()=>agregarAlCarrito(producto))
     });
     
-}
+}    
 
-crearTarjetaProductosInicio(listaProductos);
+let listaProductos=[]
+
+getProductos().then(productos => {
+  if (productos) {
+      crearTarjetaProductosIn(productos);
+      listaProductos=productos;
+  }
+}).catch(error => console.error("Error en la solicitud de productos:", error));
 
 //------------------------Carrito de compras - funcionalidad segun tamaño ---------------------
 
@@ -117,9 +125,9 @@ const handleSearch=()=>{
     resultado.innerHTML="";
   
    crearTarjetaProductos(filtroConjunto);
- };
+};
 
- searchInput.addEventListener("input", handleSearch);
+searchInput.addEventListener("input", handleSearch);
 
 // -----------Funcionalidad header productos-----------------
 
