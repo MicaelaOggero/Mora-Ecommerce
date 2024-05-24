@@ -6,8 +6,8 @@ function crearTarjetaProductosIn(productos){
         const nuevoConjunto=document.createElement("div");
         nuevoConjunto.classList = "tarjeta-producto";
         nuevoConjunto.innerHTML = `
-        <div class="producto" style="width: 18rem;">
-                <img src=${producto.imagen} class="card-img-top" alt="...">
+        <div class="producto" style="width: 16rem;">
+                <img src="imagenes/${producto.id}.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title mt-3">${producto.nombre}</h5>
                   <div class="mt-2 precio">$${producto.precio}</div>

@@ -2,11 +2,11 @@
     {
         "id": 1,
         "nombre": "Conjunto de encaje",
-        "precio": 3962,
+        "precio": 5962,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/1.png"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/2.png"
     },
     {
         "id": 3,
@@ -24,51 +24,51 @@
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/3.png"
     },
     {
         "id": 4,
         "nombre": "Conjunto de encaje",
-        "precio": 3962,
+        "precio": 7962,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/4.png"
     },
     {
         "id": 5,
         "nombre": "Conjunto de encaje",
-        "precio": 3962,
+        "precio": 4962,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/5.png"
     },
     {
         "id": 6,
         "nombre": "Conjunto de encaje",
-        "precio": 3962,
+        "precio": 6500,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/6.png"
     },
     {
         "id": 7,
         "nombre": "Medias",
-        "precio": 3962,
+        "precio": 1500,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/7.png"
     },
     {
         "id": 8,
         "nombre": "Bombis",
-        "precio": 3962,
+        "precio": 1500,
         "codigo": "AVR1004",
         "color": ["rojo", "blanco", "negro"],
         "talle": [85, 90, 95, 100],
-        "imagen": "imagenes/conjunto.jpg"
+        "imagen": "imagenes/8.png"
     }
 ]
