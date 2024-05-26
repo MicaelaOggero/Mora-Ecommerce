@@ -1,6 +1,5 @@
 function agregarAlCarrito(producto) {
   const memoria = JSON.parse(localStorage.getItem("productos"));
-  console.log(memoria);
   let cuenta = 0;
   if (!memoria) {
     const nuevoProducto = getNuevoProductoParaMemoria(producto);
@@ -10,7 +9,6 @@ function agregarAlCarrito(producto) {
     const indiceProducto = memoria.findIndex(
       (conjunto) => conjunto.id === producto.id
     );
-    console.log(indiceProducto);
     const nuevaMemoria = memoria;
 
     if (indiceProducto === -1) {
@@ -55,7 +53,6 @@ function eliminarUnElemento(producto) {
 
   // Verificar si se encontró el producto
   if (indiceProducto !== -1) {
-    console.log(indiceProducto);
     // Eliminar el producto del array
     memoria.splice(indiceProducto, 1);
 

@@ -1,7 +1,6 @@
 const contenedorTarjetas = document.getElementById("productos-conteiner");
 
 function crearTarjetaProductosIn(productos) {
-  console.log(productos);
   productos.forEach((producto) => {
     const nuevoConjunto = document.createElement("div");
     nuevoConjunto.classList = "tarjeta-producto";
@@ -122,30 +121,6 @@ function funcionalidadParaPantallasGrandes() {
 
 // -----------------------Filtro busqueda----------------------------------
 
-function crearTarjetaProductos(productos) {
-  productos.forEach((producto) => {
-    const nuevoConjunto = document.createElement("div");
-    nuevoConjunto.classList = "tarjeta-producto";
-    nuevoConjunto.innerHTML = `
-      <div class="producto" style="width: 18rem;">
-              <img src=${producto.imagen} class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title mt-3">${producto.nombre}</h5>
-                <div class="mt-2 precio">$${producto.precio}</div>
-                <div class="codigo-content">
-                  <label class="mt-2">Código:</label>
-                  <div class="codigo mt-2">${producto.codigo}</div>
-                </div>
-                <button class="btn btn-primary mt-1 btn-comprar">Comprar</button>
-              </div>
-          </div>`;
-    contenedorTarjetas.appendChild(nuevoConjunto);
-    nuevoConjunto
-      .getElementsByTagName("button")[0]
-      .addEventListener("click", () => agregarAlCarrito(producto));
-  });
-}
-
 const searchInput = document.getElementById("filtro");
 
 const resultado = document.getElementById("productos-conteiner");
@@ -177,7 +152,6 @@ enlaces.forEach(function (enlace) {
 
     // Obtener la categoría del enlace
     var categoria = enlace.getAttribute("categoria");
-    console.log(categoria);
 
     // Mostrar u ocultar los productos según la categoría seleccionada
     mostrarProductosPorCategoria(categoria.toLowerCase());
@@ -187,12 +161,9 @@ enlaces.forEach(function (enlace) {
 // Función para mostrar los productos por categoría
 function mostrarProductosPorCategoria(categoria) {
   contenedorTarjetas.innerHTML = "";
-  console.log(categoria);
   const filtroConjunto = listaProductos.filter((conjunto) =>
     conjunto.nombre.toLocaleLowerCase().includes(categoria.toLowerCase())
   );
-
-  console.log(filtroConjunto);
 
   resultado.innerHTML = "";
 
